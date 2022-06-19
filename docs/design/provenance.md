@@ -17,7 +17,7 @@ But what is **never** seemingly challenged here is that this puts the locus of t
 
 ### The UK Post Office Scandal
 
-Here is a cautionary tale of why, as a clinician, you can't trust your life and career to database-level audit-trailing:
+Here is a cautionary tale of why, as a clinician, you can't trust your life and career to organisational database-level audit-trailing:
 
 [The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal). In a miscarriage of justice of monumental proportions in the UK, a series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies including huge shortfalls of cash in the cash drawers at the end of the day.
 
