@@ -19,5 +19,5 @@ A GitEHR clinical reecord is completely separated from the records of other pati
 
 This separation also means that if, within your organisation, you need to perform database operations over multiple patients, then you can do this.
 
-A healthcare organisation might care for thousands or even millions of patients.
+A healthcare organisation might care for thousands or even millions of patients, so it is accepted that a database at organisation level might be useful. But this database must never be the canonical patient record.
 

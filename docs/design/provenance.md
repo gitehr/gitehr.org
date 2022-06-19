@@ -9,13 +9,17 @@ This is achieved using simple, existing, reliable and trusted technology which i
 
 In fact, using these technologies to sign and audit-trail commits to the clinical record represents a significant advance on the current 'state of the art'.
 
-### Existing audit-trailing is broken
+### Existing audit-trailing is broken anyway
 
 In a typical Electronic Health Record (EHR) program in use today in healthcare organisations across the world, the clinical entries are saved into a database, and often (but not always!) there is an audit-trail built into the system, which ensures that if, for example, a nefarious user changed an entry *after* an adverse incident in order to avoid accountability, the tampering would be evident to the admins of such a system.
 
 But what is **never** seemingly challenged here is that this puts the locus of trust **entirely** with the admins of the EHR, the organisation's leadership itself, and also in the design of the EHR. If you think you can put your trust unequivocally within databases, admins, and more importantly the leaders of large organisations, then you are wrong.
 
-Here is a cautionary tale of why, as a clinician, you can't trust your life and career to these things: [The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal). In a miscarriage of justice of monumental proportions in the UK, a series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies including huge shortfalls of cash in the cash drawers at the end of the day.
+### The UK Post Office Scandal
+
+Here is a cautionary tale of why, as a clinician, you can't trust your life and career to database-level audit-trailing:
+
+[The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal). In a miscarriage of justice of monumental proportions in the UK, a series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies including huge shortfalls of cash in the cash drawers at the end of the day.
 
 Every single one of these discrepancies was the *fault of the system and its design*. However its admins believed the system, not the users. The IT company which built the system believed the system, not the users.
 
