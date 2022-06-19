@@ -6,6 +6,7 @@ copyright: >
 
 theme: 
   features:
+    - navigation.indexes
     - navigation.instant
     - navigation.sections
     - navigation.tabs
