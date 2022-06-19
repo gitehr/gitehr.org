@@ -1,6 +1,18 @@
 site_name: GitEHR
+repo_url: https://github.com/gitehr/gitehr.org
+repo_name: gitehr/gitehr.org
+copyright: >
+  GitEHR and all intellectual property rights are Copyright &copy; 2022 Dr Marcus Baw. and freely licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><br/><br/>
 
 theme: 
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+  
   name: material
   
   palette:
@@ -17,7 +29,14 @@ theme:
       accent: deep orange
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
-        
-  features:
-    - navigation.instant
+        name: Switch to light mode      
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary.md
+  - pymdownx.superfences
