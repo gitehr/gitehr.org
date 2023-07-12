@@ -2,9 +2,7 @@
 
 This story serves to illustrate the conclusions of why #DatabasesAreHarmful and #FilesAreTheAnswer.
 
-## In the beginning, there were only databases
-
-A long time ago, there was a large kingdom called Databasechester.  
+## A long time ago, there was a large kingdom called Databasechester.
 
 In this land, the concept of a document file format *did not exist*. Each organisation kept their internal documents inside a database, inside its organisation. Excluding the slight problem they were still locked into their IT systems' vendor, this solution worked fine *inside each organisation*.
 
