@@ -13,6 +13,7 @@ nav:
   - Home: 'index.md'
   - About: 
     - 'about/about.md'
+    - Origin Story: 'about/gitEHRstory.md'
     - The Tale of Databasechester: 'about/Databasechester.md'
     - Design:
       - 'about/design/audit-trail.md'
