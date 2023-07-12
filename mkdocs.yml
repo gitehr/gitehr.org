@@ -11,6 +11,24 @@ copyright: >
 
 nav:
   - Home: 'index.md'
+  - About: 
+    - 'about/about.md'
+    - The Tale of Databasechester: 'about/Databasechester.md'
+    - Design:
+      - 'about/design/audit-trail.md'
+      - 'about/design/index.md'
+      - 'about/design/longevity.md'
+      - 'about/design/no-lock-in.md'
+      - 'about/design/patient-centricity.md'
+      - 'about/design/portability.md'
+      - 'about/design/provenance.md'
+      - 'about/design/redundancy.md'
+      - 'about/design/security.md'
+      - 'about/design/simplicity.md'
+      - 'about/design/structure.md'
+    - Specification:
+      - 'about/specification/specification.md'
+    - Contributors: 'about/contributors.md'
 
 theme: 
   features:
@@ -49,3 +67,6 @@ markdown_extensions:
       auto_append:
         - includes/glossary.md
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -4,10 +4,6 @@ GitEHR is a decentralised and portable health record powered by Git, cryptograph
 
 ## The Problem
 
-Since beginning work in health technology over ten years ago, Dr Marcus Baw has struggled with how to create an interoperable and portable health record.
-
-Though much work already exists regarding health interoperability, he sadly concluded that all of it is misguided. The decision to adopt databases for the content of health records was wrong. It has resulted in chaos across health tech, with vast sums of money wasted and *un*-interoperable records.
-
 Traditional health interoperability focuses on sending data from one **Organisation-Centric Database** to a different **Organisation-Centric Database**.
 
 Databases work fine *inside* the walls of a particular organisation that invested resources in developing a bespoke solution for their needs.
@@ -20,13 +16,13 @@ Looking at the well-established tech world, there are no successful examples of 
 
 *Distributed Version Control Software (DVCS)*, such as *Git*, provides exemplary proof of how to engineer multi-contributor and secure. Crucially, these private repositories are agnostic of the software used to view or manipulate them.
 
-Throughout his health informatics career, Dr Baw has learned as much as possible about how existing tech solutions can benefit the health tech space. Though areas which require specialised healthcare technology exist, these health-specific solutions are not *always* required. Many problems faced in healthcare have already been solved by the wider tech world - which is why GitEHR draws extensively on existing technology.
+Though areas which require specialised healthcare technology exist, these health-specific solutions are not *always* required. Many problems faced in healthcare have already been solved by the wider tech world - which is why GitEHR draws extensively on existing technology.
 
 !!! quote "Rob Dyke Says"
     "All software has already been written."
 
 Medical records need interoperable and extensible file formats. GitEHR will have an open standard with a reference implementation that is open-source. It will enable many other implementations to exist. Multiple platforms for reading, writing, and processing records can exist.
 
-The paradigm must change. This is the beginning.
-
 GitEHR solves the interoperability problem, setting the foundations to solve many other problems of health technology.
+
+The paradigm must change. This is the beginning.
