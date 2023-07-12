@@ -9,6 +9,9 @@ repo_name: gitehr/gitehr.org
 copyright: >
   GitEHR and all intellectual property rights are Copyright &copy; 2022 Dr Marcus Baw. and freely licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><br/><br/>
 
+nav:
+  - Home: 'index.md'
+
 theme: 
   features:
     - navigation.indexes
