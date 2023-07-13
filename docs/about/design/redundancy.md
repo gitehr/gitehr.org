@@ -1,12 +1,16 @@
+---
+author: Dr Marcus Baw
+reviewers: Dr Anchit Chandran
+---
+
 # Redundancy
 
-Every organisation providing care to a patient keeps a complete copy of the entire healthcare record. Health records are not large in the context of modern data management.
+Every organisation providing care to a patient keeps a complete copy of their entire GitEHR healthcare record. Health records are small in the context of modern data management.
 
-This means that all the organisations that a patient has allowed access to their medical record keep an up to date copy of the record.
+All organisations to which a patient is granted access keep an up-to-date record copy.
 
-Distributing the storage of medical records in this was makes them extremely resilient to loss, deletion, corruption, or vandalism.
+Distributing the storage of medical records makes them extremely resilient to loss, deletion or corruption.
 
 ## Tamper resistance
 
-In the same way that blockchains use consensus to make sure that there is only one version of the truth, records that have been altered in only one place immediately stand out as having been altered.
-
+Using the same consensus principle from blockchain technology to ensure there is only one version of the truth, GitEHR records which have been altered in any way are instantly identified.
