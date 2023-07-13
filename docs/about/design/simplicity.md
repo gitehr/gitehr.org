@@ -1,22 +1,27 @@
+---
+author: Dr Marcus Baw
+reviewers: Dr Anchit Chandran
+---
+
 # Simplicity
 
-## Content of the health record should be in plain text, in files on disk
+**The content of the health record should be in plain text, in files on disk**.
 
-**in plain text** so that the content is readable even in low-tech environments. (Ideally a viewer will render this plain text into a much more usable and feature-rich application view. But you have the text-on-disk view there as a fallback.)
+**In plain text**: content is readable even in low-tech environments. Ideally, a viewer will render this plain text into a more usable and feature-rich application view. But the text-on-disk view exists as a fallback.
 
-**in files** because files can easily be made to work interoperably across all operating systems.
+**In files**: files can easily work interoperably across all operating systems.
 
-**on disk**, as opposed to being in a database*
+**On disk**: as opposed to being in a database*.
 
-!!! note
+!!! "Of course, databases are also on disk."
+    Though databases also exist on disk, there is a difference between being buried in a database versus having easy access to a file.
 
-    yes databases are also on disk somewhere, we know this, but there is a difference between data being buried in a database and being a file on disk.
+## New entries are saved in a new file
 
-## New entries in the record should be in a new file
+Medical practice can usually be distilled to an 'atomic unit of care'. For a clinic visit, a single entry or a few linked entries could summarise the visit.
 
-Medical practice can usually be distilled down to an 'atomic unit of care' which is about the right size for resultant clinical record entries. For a clinic visit one might expect a single entry summarising the visit, or possibly a few linked entries
+## GitEHR entries are linkable
 
-## All GitEHR entries are linkable 
+As modern clinical records become more complex, clinicians need help finding specific data items.
 
-As modern clinical records get larger and more complex, clinicians struggle to find specific items of data. The internet has solved this problem but the use of the URL or internet 'link' - yet this simplest of technologies has not found its way into healthcare records.
-
+The Internet has solved this problem by using the URL or Internet 'link'. Somehow, the most basic of technologies has not yet found its way into the current paradigm.
