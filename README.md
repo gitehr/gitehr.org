@@ -1,14 +1,27 @@
 # gitehr.org
 
-Documentation and specification site for GitEHR
+Documentation and specification site for GitEHR.
 
-## Development
+## Development Getting Started
 
-Uses Material for MkDocs, running in Docker. This obviates the need for all that tedious messing about with Python virtualenvs.
+Dockerized development, running Material for MkDocs. Get started in 3 steps:
 
-`git clone` this repo
+Clone the repo:
 
-`cd` into this repo
+```bash
+git clone https://github.com/gitehr/gitehr.org.git
+```
 
-`docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material`
+Enter the directory:
 
+```bash
+cd gitehr.org
+```
+
+Run the following Docker command:
+
+```bash
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+```
+
+See the local development site at `localhost:8000`.
