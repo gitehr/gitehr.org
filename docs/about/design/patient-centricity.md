@@ -1,23 +1,29 @@
-# Patient-centricity
+---
+author: Dr Marcus Baw
+reviewers: Dr Anchit Chandran
+---
 
-For as long as I can remember, informaticians and health technologists have been proposing the idea of 'Patient Centric Health Records'. But they have been unable to deliver a patient-centric record because the EHR uses a database and is thereby already inherently **organisation-centric**.
+# Patient-Centricity
 
-!!! success 
-    Understanding the above is the single most important step to seeing why we cannot make further progress in EHRs without changing the paradigm.
-    
+Informaticians and health technologists have been proposing the idea of 'Patient-Centric Health Records' for a long time. They have been unable to deliver a patient-centric record because the EHR uses a database and is thereby inherently **organisation-centric**.
+
+!!! success
+    Digesting this concept is the most crucial step to understanding why progress cannot be made in EHR without changing the paradigm.
+
 ## One patient, one record
 
-A GitEHR clinical record is only ever the record of **one** patient.
+A GitEHR *clinical record* is only ever the record of **one** patient.
 
-This ensures clean separation for the data in any other patient records and organisational data.
+This ensures a clean separation of the data in any other patient records and organisational data.
 
 Organisations giving care keep a local record of the patient's care.
 
 ## Separation from Organisational information
 
-A GitEHR clinical reecord is completely separated from the records of other patients and any organisation-level information. This separation allows multiple organisations to be able to contribute to the GitEHR, in the same way that multiple contributors can work on the same Git repository.
+A GitEHR clinical record is completely separated from the records of other patients and any organisation-level information.
 
-This separation also means that if, within your organisation, you need to perform database operations over multiple patients, then you can do this.
+This separation allows multiple organisations to contribute to the GitEHR, akin to how numerous contributors can work on the same Git repository.
 
-A healthcare organisation might care for thousands or even millions of patients, so it is accepted that a database at organisation level might be useful. But this database must never be the canonical patient record.
+It also allows database operations to be performed over multiple patients if required.
 
+An organisation-level database is useful as a healthcare organisation may care for thousands or even millions of patients. But this must never be the canonical Source of Truth of the patient record.
