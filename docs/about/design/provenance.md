@@ -1,45 +1,49 @@
-## Trust
+---
+author: Dr Marcus Baw
+reviewers: Dr Anchit Chandran
+---
 
-Clinicians need to have absolute trust in the veracity of information in the clinical record, so GitEHR has been designed to ensure that, while it remains a distributed and decentralised system, the information contained within is completely trustworthy.
+# Provenance
 
-This is achieved using simple, existing, reliable and trusted technology which is widely used to establish trust in other parts of tech:
+Clinicians need absolute trust in the integrity of information in the clinical record. GitEHR has been designed to ensure that its containing information is completely trustworthy whilst remaining a distributed and decentralised system.
 
-* crpytographic signatures
-* cryptographic hashes
+This is achieved using existing, reliable and time-tested technology used to establish trust in other parts of tech, including:
 
-In fact, using these technologies to sign and audit-trail commits to the clinical record represents a significant advance on the current 'state of the art'.
+* Cryptographic signatures
+* Cryptographic hashes
 
-### Existing audit-trailing is broken anyway
+Using these technologies to sign and audit-trail commits to the clinical record already represents a significant advance on the current 'state of the art'.
 
-In a typical Electronic Health Record (EHR) program in use today in healthcare organisations across the world, the clinical entries are saved into a database, and often (but not always!) there is an audit-trail built into the system, which ensures that if, for example, a nefarious user changed an entry *after* an adverse incident in order to avoid accountability, the tampering would be evident to the admins of such a system.
+## Existing audit trailing is broken
 
-But what is **never** seemingly challenged here is that this puts the locus of trust **entirely** with the admins of the EHR, the organisation's leadership itself, and also in the design of the EHR. If you think you can put your trust unequivocally within databases, admins, and more importantly the leaders of large organisations, then you are wrong.
+In the current typical Electronic Health Record (EHR) program, the clinical entries are saved into a database, often with (but not always!) an audit trail built into the system. This highlights any potential tampering of records by a nefarious user attempting to doctor the details of an incident to the system admins.
 
-### The UK Post Office Scandal
+This places the locus of trust **entirely** on the system admins, the organisation's leadership, and the EHR design. There has never been a safe, successful, or effective example of placing this level of trust on such few people.
 
-Here is a cautionary tale of why, as a clinician, you can't trust your life and career to organisational database-level audit-trailing:
+### [The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal)
 
-[The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal). In a miscarriage of justice of monumental proportions in the UK, a series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies including huge shortfalls of cash in the cash drawers at the end of the day.
+This was an example of why clinicians cannot trust their careers and lives to organisational database-level audit trailing.
 
-Every single one of these discrepancies was the *fault of the system and its design*. However its admins believed the system, not the users. The IT company which built the system believed the system, not the users.
+A series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies, including huge cash shortfalls in the cash drawers at the end of the day.
 
-The Post Office's senior leadership backed the system for which they'd paid millions, not their own staff.
+Each of these discrepancies was the *fault of the system and its design*.
 
-A number of people were jailed, some committed suicide, many thousands of lives were ruined. An audit-trail system was built into this system but it didn't work.
+However, its admins believed the system, *not the users*. The IT company which built the system believed the system, not the users. The Post Office's senior leadership backed the system for which they'd paid millions, not their staff.
 
-It's all too easy to imagine similar discrepancies occurring in clinical records. A really simple example is if the system failed to show a severe allergy alert to a clinician, and that clinician administers a drug which kills the patient. The system at fault but nobody will believe the clinician. It is far easier to scapegoat a clinician than to blame the multi-million pound EHR. The system admins will want to believe the EHR. The organisational leadership will want to believe the EHR.
+Many people were jailed, some committed suicide, and many thousands of lives were ruined. An audit trail was built into this system, but it didn't work.
 
-It's also possible that someone with admin access might be induced to change something in the audit-trail, which in current EHRs would be essentially undetectable.
+Similar discrepancies are equally likely in clinical records. A simple example is if an EHR failed to show a severe allergy to a clinician. The clinician administers a drug which kills the patient. The **system is at fault** but the clinician is scapegoated. The system admins and organisational leadership will not accept responsibility, jeopardising their multi-million-pound investment.
+
+Another danger is that a user with admin access can be induced to falsify records in the audit trail, which would be essentially undetectable under the current paradigm.
 
 ### Why GitEHR is different
 
+Entries in a GitEHR are each cryptographically signed. This means the entry content is followed by a cryptographic signature of the content, which can be mathematically proved to have been created only using that specific clinician's *private key*. Assuming private keys are kept secure, there isn't enough computation power on the planet to overcome this proof.
 
-Entries in a GitEHR are each cryptographically signed, meaning that the content of the entry is followed by a cryptographic signature of the content, which can be mathematically proven to have been created using the private key of the clinician. Assuming the private keys are kept properly secure, **there's nobody else on the planet who could have made that entry.**
+Any changes to the clinical entry content result in an unpredictably different cryptographic signature, making it invalid and immediately exposing tampering.
 
-If any change is made to the content of the clinical entry, the cryptographic signature would be invalid, immediately exposing the amendment.
+GitEHR entries are sequential: each commit has a direct parent commit. This way, entries cannot be reordered without changing the content, thus invalidating the signature.
 
-Entries in a GitEHR are sequential, with each commit having a direct parent commit. In this way, commits cannot be reordered without changing the content, again such amendment would be immediately obvious.
+Legitimate factual changes are supported using this same mechanism. The change is made transparent through the commit tree. Both the original and updated versions can be viewed, with the person who made the change becoming easily identifiable.
 
-There is frequently a valid need to make a factual change to a clinical entry, and GitEHR supports this, by simply making the update a transparent, visible process in the commit tree. The record shows the updated version, which is often clinically safer, but the previous value can be viewed and it is entirely clear who made the change and why.
-
-GitEHR is completely open source, meaning that 'with enough eyes looking at a problem, all bugs are shallow' and we can expect that these most fundamental of GitEHR trust features will be extremely safe and reliable.
+GitEHR is completely open source, meaning that 'with enough eyes looking at a problem, all bugs are shallow'. We expect these fundamental GitEHR trust features will be extremely safe and reliable.
