@@ -16,8 +16,8 @@ nav:
     - Origin Story: 'about/gitEHRstory.md'
     - The Tale of Databasechester: 'about/Databasechester.md'
     - Design:
+      - 'about/design/design.md'
       - 'about/design/audit-trail.md'
-      - 'about/design/index.md'
       - 'about/design/longevity.md'
       - 'about/design/no-lock-in.md'
       - 'about/design/patient-centricity.md'
