@@ -9,6 +9,28 @@ repo_name: gitehr/gitehr.org
 copyright: >
   GitEHR and all intellectual property rights are Copyright &copy; 2022 Dr Marcus Baw. and freely licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><br/><br/>
 
+nav:
+  - Home: 'index.md'
+  - About: 
+    - 'about/about.md'
+    - Origin Story: 'about/gitEHRstory.md'
+    - The Tale of Databasechester: 'about/Databasechester.md'
+    - Design:
+      - 'about/design/design.md'
+      - 'about/design/audit-trail.md'
+      - 'about/design/longevity.md'
+      - 'about/design/no-lock-in.md'
+      - 'about/design/patient-centricity.md'
+      - 'about/design/portability.md'
+      - 'about/design/provenance.md'
+      - 'about/design/redundancy.md'
+      - 'about/design/security.md'
+      - 'about/design/simplicity.md'
+      - 'about/design/structure.md'
+    - Specification:
+      - 'about/specification/specification.md'
+    - Contributors: 'about/contributors.md'
+
 theme: 
   features:
     - navigation.indexes
@@ -46,3 +68,6 @@ markdown_extensions:
       auto_append:
         - includes/glossary.md
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
