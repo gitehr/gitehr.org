@@ -1,23 +1,19 @@
-# The Tale of Databasechester
+# Databasechester
 
-This story serves to illustrate the conclusions of why #DatabasesAreHarmful and #FilesAreTheAnswer.
+To try to explain why I have come to the conclusion that #DatabasesAreHarmful and #FilesAreTheAnswer
 
-## A long time ago, there was a large kingdom called Databasechester.
+Join me in imagining my fictional city Databasechester in which there is *no such thing* as a document file format. Every organisation keeps its internal documents in a database inside its organisation. And of course this works adequately well, *inside their organisation*. Putting aside the fact that they are locked in to their vendor
 
-In this land, the concept of a document file format *did not exist*. Each organisation kept their internal documents inside a database, inside its organisation. Excluding the slight problem they were still locked into their IT systems' vendor, this solution worked fine *inside each organisation*.
+But now, in our fictional city, the local Council want to send documents to the Fire Department. But the Fire Department have their own, different, document management database. So the Council have to commission development of some software to 'translate' a Council document into a Fire Department document.
 
-One day, the Local Council wish to send documents to the Fire Department! Unfortunately, the Fire Department possesses a different document management database. The Council were forced to commission the development of magical software to *transmute* Council documents into Fire Department documents.
+It kind of works, but it was expensive to have built, and there are features in the Council's system that can't be represented accurately in the Fire Department system, so the translation is 'lossy'. But in some way the bulk of the communication gets through and the Council can now send a document to the Fire Department.
 
-Though costing a LOT of gold, this solution worked fine. But the Council's system had some bespoke features which can't be accurately represented in the Fire Department's system. This data was sadly lost in the transmutation, termed by the magic folk as a "lossy translation". But in the end, after years of work and kilos of gold spent, most of the Council's documents can be transferred to the Fire Department!
+So far so awful. But now the Fire Department needs to send a reply. Problem. They **also** now need to commission a piece of software to convert from their internal document database to the Council's. More expense and difficulty ensue, but after a while the Fire Department finally now has the ability to communicate *back* to the Council.
 
-Another day, the Fire Department wish to send documents to the Local Council! This was a completely unforeseen affair. The Fire Department is forced to commission the development of magical software to transmute Fire Department documents into Council documents. After even more years of work and kilos of gold spent, the Local Council and Fire Department can accomplish the previously thought impossible task of *communicating* with each other.
+But - there is also the Police Department to communicate with. More software is commissioned by both organisations.
 
-Another day, the Police Department wish to send documents to the Local Council *and* the Fire Department! After many years and exorbitant amounts of gold, Databasechester has a system in which all three organisations can communicate with each other. The kingdom got poorer, whilst the magic software people got richer.
+As the Council needs to communicate with more and more departments and teams, the amount of work increases rapidly, creating huge costs and delays, and also creating lossy, poor quality communication.
 
-As the days go by, more and more organisations wish to send documents: yet another completely unforeseen affair! Even creating the magical transmutation software rapidly requires more work and gold. It results in more lossy, poor-quality communication.
+Nobody would be surprised if a city which managed simple documents like this could achieve very little, despite huge amounts of money being spent on interoperability.
 
-No one in the surrounding kingdoms was surprised that Databasechester achieved very little, despite spending inexplicable amounts of gold to solve an exponentially growing interoperability problem.
-
-**The End.**
-
-Is this familiar to anyone working in health tech?
+Is this starting so sound familiar to anyone working in health tech? The absence of any kind of file format for medical records has created this exact scenario within the NHS. The NHS is a city of databases, with no document file format.
