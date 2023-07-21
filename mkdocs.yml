@@ -13,8 +13,8 @@ nav:
   - Home: 'index.md'
   - About:
     - 'about/about.md'
-    - Origin Story: 'about/gitEHRstory.md'
-    - The Tale of Databasechester: 'about/Databasechester.md'
+    - The GitEHR story: 'about/gitEHRstory.md'
+    - Databasechester: 'about/Databasechester.md'
     - Design:
       - 'about/design/design.md'
       - 'about/design/audit-trail.md'
