@@ -7,11 +7,11 @@ repo_url: https://github.com/gitehr/gitehr.org
 repo_name: gitehr/gitehr.org
 
 copyright: >
-  GitEHR and all intellectual property rights are Copyright &copy; 2022 Dr Marcus Baw. and freely licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><br/><br/>
+  GitEHR and all intellectual property rights are Copyright &copy; 2022-23 Dr Marcus Baw. and freely licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><br/><br/>
 
 nav:
   - Home: 'index.md'
-  - About: 
+  - About:
     - 'about/about.md'
     - Origin Story: 'about/gitEHRstory.md'
     - The Tale of Databasechester: 'about/Databasechester.md'
@@ -31,8 +31,14 @@ nav:
       - 'about/specification/specification.md'
     - Contributors: 'about/contributors.md'
 
-theme: 
+theme:
   features:
+    - content.action.edit # explicitly adds edit button (Material4MkDocs9.0)
+    - content.action.view # explicitly adds view button (Material4MkDocs9.0)
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer # explicitly adds footer prev/next (Material4MkDocs9.0)
     - navigation.indexes
     - navigation.instant
     - navigation.sections
@@ -40,24 +46,26 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
-  
+    - toc.follow
+
+
   name: material
-  
+
   palette:
-    - media: "(prefers-color-scheme: light)" 
+    - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: amber
       accent: deep orange
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)" 
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: amber
       accent: deep orange
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode      
+        name: Switch to light mode
 
 markdown_extensions:
   - abbr
