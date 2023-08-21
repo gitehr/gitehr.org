@@ -1,6 +1,6 @@
 # gitehr.org
 
-Documentation and specification site for GitEHR.
+Documentation and specification site for GitEHR: https://gitehr.org
 
 ## Development Getting Started
 
