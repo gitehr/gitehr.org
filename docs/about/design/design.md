@@ -68,9 +68,11 @@ This is achieved using existing, reliable and time-tested technology used to est
 * Cryptographic signatures
 * Cryptographic hashes
 Using these technologies to sign and audit-trail commits to the clinical record already represents a significant advance on the current 'state of the art'.
+
 ## Existing audit trailing is broken
 In the current typical Electronic Health Record (EHR) program, the clinical entries are saved into a database, often with (but not always!) an audit trail built into the system. This highlights any potential tampering of records by a nefarious user attempting to doctor the details of an incident to the system admins.
 This places the locus of trust **entirely** on the system admins, the organisation's leadership, and the EHR design. There has never been a safe, successful, or effective example of placing this level of trust on such few people.
+
 ### [The UK Post Office Scandal](https://en.wikipedia.org/wiki/British_Post_Office_scandal)
 This was an example of why clinicians cannot trust their careers and lives to organisational database-level audit trailing.
 A series of errors occurred in the system used to manage the Post Office's banking service. This resulted in large discrepancies, including huge cash shortfalls in the cash drawers at the end of the day.
@@ -79,7 +81,9 @@ However, its admins believed the system, *not the users*. The IT company which b
 Many people were jailed, some committed suicide, and many thousands of lives were ruined. An audit trail was built into this system, but it didn't work.
 Similar discrepancies are equally likely in clinical records. A simple example is if an EHR failed to show a severe allergy to a clinician. The clinician administers a drug which kills the patient. The **system is at fault** but the clinician is scapegoated. The system admins and organisational leadership will not accept responsibility, jeopardising their multi-million-pound investment.
 Another danger is that a user with admin access can be induced to falsify records in the audit trail, which would be essentially undetectable under the current paradigm.
+
 ### Why GitEHR is different
+
 Entries in a GitEHR are each cryptographically signed. This means the entry content is followed by a cryptographic signature of the content, which can be mathematically proved to have been created only using that specific clinician's *private key*. Assuming private keys are kept secure, there isn't enough computation power on the planet to overcome this proof.
 Any changes to the clinical entry content result in an unpredictably different cryptographic signature, making it invalid and immediately exposing tampering.
 GitEHR entries are sequential: each commit has a direct parent commit. This way, entries cannot be reordered without changing the content, thus invalidating the signature.
